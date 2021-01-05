@@ -6,7 +6,8 @@
 </head>
 <body>
 <table>
-
+    <%@include file="/WEB-INF/header.html"%>
+    <br>
     <h2>Test Page</h2>
 
     <% Task task = (Task) request.getAttribute("task"); %>
