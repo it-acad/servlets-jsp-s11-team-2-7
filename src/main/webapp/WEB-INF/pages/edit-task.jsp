@@ -30,7 +30,7 @@
                 <label for="title">Name:</label>
             </td>
             <td>
-                <input type = "text" id = "title" name="title">
+                <input type = "text" id = "title" name="title" >
             </td>
         </tr>
         <tr>
@@ -38,7 +38,7 @@
                 <label for="priority">Priority:</label>
             </td>
             <td>
-                <input list = "guestlist" id = "priority" name="priority">
+                <input list = "guestlist" id = "priority" name="priority" >
                 <datalist id = "guestlist">
                     <option value = "LOW"> </option>
                     <option value = "MEDIUM"> </option>

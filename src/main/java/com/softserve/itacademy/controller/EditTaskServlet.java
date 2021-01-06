@@ -25,10 +25,12 @@ public class EditTaskServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        task = taskRepository.read(Integer.parseInt(request.getParameter("id")));
+        try {
+            task = taskRepository.read(Integer.parseInt(request.getParameter("id")));
 
-        request.setAttribute("task",task);
-        request.getRequestDispatcher("/WEB-INF/pages/edit-task.jsp").forward(request,response);
+            request.setAttribute("task", task);
+            request.getRequestDispatcher("/WEB-INF/pages/edit-task.jsp").forward(request, response);
+        }catch (Exception ex){ request.getRequestDispatcher("/WEB-INF/pages/exception-edit.jsp").forward(request, response);}
     }
 
     @Override

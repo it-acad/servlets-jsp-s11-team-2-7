@@ -16,12 +16,19 @@ import java.io.IOException;
         public void init() throws ServletException {
             taskRepository = TaskRepository.getTaskRepository();
         }
+
         @Override
         protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-            Task task = taskRepository.read(Integer.parseInt(request.getParameter("id")));
+            try{Task task = taskRepository.read(Integer.parseInt(request.getParameter("id")));
+
             request.setAttribute("task", task);
             RequestDispatcher requestDispatcher = request.getRequestDispatcher("/WEB-INF/pages/task-read.jsp");
-            requestDispatcher.forward(request, response);
+            requestDispatcher.forward(request, response);}
+            catch (Exception ex){
+
+                RequestDispatcher requestDispatcher = request.getRequestDispatcher("/WEB-INF/pages/exception-read.jsp");
+                requestDispatcher.forward(request, response);
+            }
         }
 
 

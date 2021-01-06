@@ -16,23 +16,12 @@
 <h2>Read existing Task</h2>
 <% Task task = (Task) request.getAttribute("task"); %>
 
-<tr>
-    <td>Id: </td>
-    <td>
-        <strong><%= task.getId()%></strong>
-    </td>
-</tr>
-<tr>
-    <td>Title: </td>
-    <td>
-        <strong><%= task.getTitle()%></strong>
-    </td>
-</tr>
-<tr>
-    <td>Priority: </td>
-    <td>
-        <strong><%= task.getPriority()%></strong>
-    </td>
-</tr>
+<h3>Id:<strong><%= task.getId()%></strong></h3>
+
+<h3>Title:<strong><%= task.getTitle()%></strong></h3>
+
+<h3>Priority: <strong><%= task.getPriority()%></strong></h3>
+
+
 </body>
 </html>

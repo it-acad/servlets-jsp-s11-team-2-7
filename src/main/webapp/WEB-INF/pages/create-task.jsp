@@ -3,7 +3,7 @@
 <html>
 <head>
     <title>Create new Task</title>
-
+    <link rel="stylesheet" href="/WEB-INF/Styles.css" type="text/css"/>
 </head>
 <body>
 <%@include file="/WEB-INF/header.html"%>
@@ -17,7 +17,7 @@
                 <label for="title">Name:</label>
             </td>
             <td>
-                <input type = "text" id = "title" name="title">
+                <input type = "text" id = "title" name="title" >
             </td>
         </tr>
         <tr>
@@ -26,7 +26,7 @@
             </td>
             <td>
                 <input list = "guestlist" id = "priority" name="priority">
-                <datalist id = "guestlist">
+                <datalist id = "guestlist" width="10px">
                     <option value = "LOW"> </option>
                     <option value = "MEDIUM"> </option>
                     <option value = "HIGH"> </option>
